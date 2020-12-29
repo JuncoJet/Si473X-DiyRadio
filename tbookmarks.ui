@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TBOOKMARKS</class>
+ <widget class="QMainWindow" name="TBOOKMARKS">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>514</width>
+    <height>321</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>书签管理器</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QListWidget" name="listWidget">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
+       <item>
+        <property name="text">
+         <string>USB</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>LSB</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>FM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>SW</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>MW</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>LW</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget_2">
+       <column>
+        <property name="text">
+         <string>频率</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>备注</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>514</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="action_I"/>
+    <addaction name="action_E"/>
+   </widget>
+   <widget class="QMenu" name="menu_1">
+    <property name="title">
+     <string>右键菜单1</string>
+    </property>
+    <addaction name="action_N"/>
+    <addaction name="action_R"/>
+    <addaction name="separator"/>
+    <addaction name="action_D"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>收音机(&amp;H)</string>
+    </property>
+    <addaction name="action_U"/>
+    <addaction name="action_D_2"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_H"/>
+   <addaction name="menu_1"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_I">
+   <property name="text">
+    <string>导入(&amp;I)</string>
+   </property>
+  </action>
+  <action name="action_E">
+   <property name="text">
+    <string>导出(&amp;E)</string>
+   </property>
+  </action>
+  <action name="action_R">
+   <property name="text">
+    <string>重命名(&amp;R)</string>
+   </property>
+  </action>
+  <action name="action_N">
+   <property name="text">
+    <string>新建(&amp;N)</string>
+   </property>
+  </action>
+  <action name="action_D">
+   <property name="text">
+    <string>删除(&amp;D)</string>
+   </property>
+  </action>
+  <action name="action_D_2">
+   <property name="text">
+    <string>下载(&amp;D)</string>
+   </property>
+  </action>
+  <action name="action_U">
+   <property name="text">
+    <string>上传(&amp;U)</string>
+   </property>
+  </action>
+  <action name="action_A">
+   <property name="text">
+    <string>添加当前电台(&amp;A)</string>
+   </property>
+   <property name="toolTip">
+    <string>添加当前电台(A)</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
