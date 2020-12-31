@@ -56,6 +56,9 @@
        </item>
       </widget>
       <widget class="QTableWidget" name="tableWidget_2">
+       <property name="contextMenuPolicy">
+        <enum>Qt::CustomContextMenu</enum>
+       </property>
        <column>
         <property name="text">
          <string>频率</string>
@@ -86,6 +89,8 @@
     </property>
     <addaction name="action_I"/>
     <addaction name="action_E"/>
+    <addaction name="separator"/>
+    <addaction name="action_S"/>
    </widget>
    <widget class="QMenu" name="menu_1">
     <property name="title">
@@ -93,6 +98,8 @@
     </property>
     <addaction name="action_N"/>
     <addaction name="action_R"/>
+    <addaction name="separator"/>
+    <addaction name="action_I_2"/>
     <addaction name="separator"/>
     <addaction name="action_D"/>
    </widget>
@@ -103,9 +110,19 @@
     <addaction name="action_U"/>
     <addaction name="action_D_2"/>
    </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>右键菜单2</string>
+    </property>
+    <addaction name="action_O"/>
+    <addaction name="separator"/>
+    <addaction name="action_I_2"/>
+    <addaction name="action_A"/>
+   </widget>
    <addaction name="menu_F"/>
    <addaction name="menu_H"/>
    <addaction name="menu_1"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action_I">
@@ -149,6 +166,24 @@
    </property>
    <property name="toolTip">
     <string>添加当前电台(A)</string>
+   </property>
+  </action>
+  <action name="action_O">
+   <property name="text">
+    <string>打开电台(&amp;O)</string>
+   </property>
+  </action>
+  <action name="action_S">
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+  </action>
+  <action name="action_I_2">
+   <property name="text">
+    <string>添加新电台(&amp;I)</string>
+   </property>
+   <property name="toolTip">
+    <string>添加新电台(I)</string>
    </property>
   </action>
  </widget>

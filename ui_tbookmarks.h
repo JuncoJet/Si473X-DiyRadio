@@ -37,6 +37,9 @@ public:
     QAction *action_D_2;
     QAction *action_U;
     QAction *action_A;
+    QAction *action_O;
+    QAction *action_S;
+    QAction *action_I_2;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QSplitter *splitter;
@@ -46,6 +49,7 @@ public:
     QMenu *menu_F;
     QMenu *menu_1;
     QMenu *menu_H;
+    QMenu *menu_2;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *TBOOKMARKS)
@@ -69,6 +73,12 @@ public:
         action_U->setObjectName(QStringLiteral("action_U"));
         action_A = new QAction(TBOOKMARKS);
         action_A->setObjectName(QStringLiteral("action_A"));
+        action_O = new QAction(TBOOKMARKS);
+        action_O->setObjectName(QStringLiteral("action_O"));
+        action_S = new QAction(TBOOKMARKS);
+        action_S->setObjectName(QStringLiteral("action_S"));
+        action_I_2 = new QAction(TBOOKMARKS);
+        action_I_2->setObjectName(QStringLiteral("action_I_2"));
         centralwidget = new QWidget(TBOOKMARKS);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -94,6 +104,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
         tableWidget_2->setHorizontalHeaderItem(1, __qtablewidgetitem1);
         tableWidget_2->setObjectName(QStringLiteral("tableWidget_2"));
+        tableWidget_2->setContextMenuPolicy(Qt::CustomContextMenu);
         splitter->addWidget(tableWidget_2);
 
         verticalLayout->addWidget(splitter);
@@ -108,6 +119,8 @@ public:
         menu_1->setObjectName(QStringLiteral("menu_1"));
         menu_H = new QMenu(menubar);
         menu_H->setObjectName(QStringLiteral("menu_H"));
+        menu_2 = new QMenu(menubar);
+        menu_2->setObjectName(QStringLiteral("menu_2"));
         TBOOKMARKS->setMenuBar(menubar);
         statusbar = new QStatusBar(TBOOKMARKS);
         statusbar->setObjectName(QStringLiteral("statusbar"));
@@ -116,14 +129,23 @@ public:
         menubar->addAction(menu_F->menuAction());
         menubar->addAction(menu_H->menuAction());
         menubar->addAction(menu_1->menuAction());
+        menubar->addAction(menu_2->menuAction());
         menu_F->addAction(action_I);
         menu_F->addAction(action_E);
+        menu_F->addSeparator();
+        menu_F->addAction(action_S);
         menu_1->addAction(action_N);
         menu_1->addAction(action_R);
+        menu_1->addSeparator();
+        menu_1->addAction(action_I_2);
         menu_1->addSeparator();
         menu_1->addAction(action_D);
         menu_H->addAction(action_U);
         menu_H->addAction(action_D_2);
+        menu_2->addAction(action_O);
+        menu_2->addSeparator();
+        menu_2->addAction(action_I_2);
+        menu_2->addAction(action_A);
 
         retranslateUi(TBOOKMARKS);
 
@@ -143,6 +165,12 @@ public:
         action_A->setText(QApplication::translate("TBOOKMARKS", "\346\267\273\345\212\240\345\275\223\345\211\215\347\224\265\345\217\260(&A)", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         action_A->setToolTip(QApplication::translate("TBOOKMARKS", "\346\267\273\345\212\240\345\275\223\345\211\215\347\224\265\345\217\260(A)", Q_NULLPTR));
+#endif // QT_NO_TOOLTIP
+        action_O->setText(QApplication::translate("TBOOKMARKS", "\346\211\223\345\274\200\347\224\265\345\217\260(&O)", Q_NULLPTR));
+        action_S->setText(QApplication::translate("TBOOKMARKS", "\344\277\235\345\255\230(&S)", Q_NULLPTR));
+        action_I_2->setText(QApplication::translate("TBOOKMARKS", "\346\267\273\345\212\240\346\226\260\347\224\265\345\217\260(&I)", Q_NULLPTR));
+#ifndef QT_NO_TOOLTIP
+        action_I_2->setToolTip(QApplication::translate("TBOOKMARKS", "\346\267\273\345\212\240\346\226\260\347\224\265\345\217\260(I)", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
 
         const bool __sortingEnabled = listWidget->isSortingEnabled();
@@ -168,6 +196,7 @@ public:
         menu_F->setTitle(QApplication::translate("TBOOKMARKS", "\346\226\207\344\273\266(&F)", Q_NULLPTR));
         menu_1->setTitle(QApplication::translate("TBOOKMARKS", "\345\217\263\351\224\256\350\217\234\345\215\2251", Q_NULLPTR));
         menu_H->setTitle(QApplication::translate("TBOOKMARKS", "\346\224\266\351\237\263\346\234\272(&H)", Q_NULLPTR));
+        menu_2->setTitle(QApplication::translate("TBOOKMARKS", "\345\217\263\351\224\256\350\217\234\345\215\2252", Q_NULLPTR));
     } // retranslateUi
 
 };

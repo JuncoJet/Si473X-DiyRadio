@@ -25,6 +25,8 @@ public:
     ~MainWindow();
     QStringList com;
     QSerialPort *ser;
+    QLabel *lb[8];
+    int slb;
     void serWrite(QString txt);
     int freq;
 
@@ -59,11 +61,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QLabel *lb[8];
     TCONSOLE *tcom;
     TBOOKMARKS *tbook;
     QRegExp *hz;
-    int slb;
 };
 
 #endif // MAINWINDOW_H
